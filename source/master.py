@@ -31,9 +31,6 @@ from overlays import *
 from math import atan
 import vcr
 
-import os
-base_path = os.path.dirname(__file__)
-
 class Main:
 
     inputs_commands = None
@@ -51,8 +48,7 @@ class Main:
     # Control devices
 
     control_mode = ControlDevice.CM_KEYBOARD
-    # devices_configurations_file = "scripts/devices_config.json"
-    devices_configurations_file = base_path + "/scripts/devices_config.json"
+    devices_configurations_file = "scripts/devices_config.json"
     aircraft_inputs_mapping_encoded = None # Used in menu state. Might be improved/remove in case of adding an input device configuration api.
 
     # VR mode
@@ -1104,8 +1100,7 @@ class Main:
 
     @classmethod
     def load_json_script(cls, file_name="scripts/simulator_parameters.json"):
-        # file = open(file_name, "r")
-        file = open(base_path + '/' + file_name, "r")
+        file = open(file_name, "r")
         
         #file = hg.OpenText(file_name)
         if not file:

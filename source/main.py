@@ -1,10 +1,4 @@
 # Copyright (C) 2018-2021 Eric Kernin, NWNC HARFANG.
-import os
-import sys
-base_path = os.path.dirname(__file__)
-print(f'{base_path = }')
-sys.path.append(base_path)
-
 import harfang as hg
 from master import Main
 import data_converter as dc
@@ -34,8 +28,8 @@ for i in range(len(sys.argv)):
 
 # ---------------- Read config file:
 
-# file_name="../config.json"
-file_name="config.json"
+file_name="../config.json"
+# file_name="config.json"
 
 file = open(file_name, "r")
 json_script = file.read()
@@ -70,10 +64,10 @@ if sys.platform == "linux" or sys.platform == "linux2":
 else:
     if Main.flag_OpenGL:
         # dc.run_command("../bin/harfang/bin/assetc/assetc assets -api GL -quiet -progress")
-        dc.run_command(".venv/Lib/site-packages/harfang/bin/assetc/assetc assets -api GL -quiet -progress")
+        dc.run_command("../.venv/Lib/site-packages/harfang/bin/assetc/assetc assets -api GL -quiet -progress")
     else:
         # dc.run_command("../bin/harfang/bin/assetc/assetc assets -quiet -progress")
-        dc.run_command(".venv/Lib/site-packages/harfang/bin/assetc/assetc assets -quiet -progress")
+        dc.run_command("../.venv/Lib/site-packages/harfang/bin/assetc/assetc assets -quiet -progress")
 
 
 # --------------- Init system

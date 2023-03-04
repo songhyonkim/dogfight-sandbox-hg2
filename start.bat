@@ -1,4 +1,6 @@
-@REM cd source
+cd source
+
 @REM ..\bin\python\python.exe main.py
-python.exe source/main.py
+python.exe main.py
+
 pause

@@ -7,9 +7,6 @@ from random import uniform
 from Particles import *
 import data_converter as dc
 
-import os
-base_path = os.path.dirname(__file__)
-
 # =====================================================================================================
 #                                  Landing
 # =====================================================================================================
@@ -681,8 +678,7 @@ class ControlDevice(MachineDevice):
     @staticmethod
     def load_inputs_mapping_file(file_name, input_mapping_name):
         #file = hg.OpenText(file_name)
-        # file = open(file_name, "r")
-        file = open(base_path + '/' + file_name, "r")
+        file = open(file_name, "r")
 
         inputs_mapping_encoded = None
         inputs_mapping = None
