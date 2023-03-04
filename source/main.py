@@ -29,7 +29,6 @@ for i in range(len(sys.argv)):
 # ---------------- Read config file:
 
 file_name="../config.json"
-# file_name="config.json"
 
 file = open(file_name, "r")
 json_script = file.read()
@@ -79,7 +78,6 @@ hg.SetLogDetailed(False)
 
 res_x, res_y = int(Main.resolution.x), int(Main.resolution.y)
 
-print(f'{Main.assets_compiled = }')
 hg.AddAssetsFolder(Main.assets_compiled)
 
 
