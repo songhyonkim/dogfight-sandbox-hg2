@@ -41,6 +41,7 @@ if defined _OLD_CODEPAGE (
 cd source
 
 @REM ..\bin\python\python.exe main.py
+
 python.exe main.py
 
-pause
+@REM pause
