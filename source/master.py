@@ -1,5 +1,4 @@
 # Copyright (C) 2018-2021 Eric Kernin, NWNC HARFANG.
-
 import harfang as hg
 from Machines import *
 from MachineDevice import *
@@ -32,6 +31,8 @@ from overlays import *
 from math import atan
 import vcr
 
+import os
+base_path = os.path.dirname(__file__)
 
 class Main:
 
@@ -50,7 +51,8 @@ class Main:
     # Control devices
 
     control_mode = ControlDevice.CM_KEYBOARD
-    devices_configurations_file = "scripts/devices_config.json"
+    # devices_configurations_file = "scripts/devices_config.json"
+    devices_configurations_file = base_path + "/scripts/devices_config.json"
     aircraft_inputs_mapping_encoded = None # Used in menu state. Might be improved/remove in case of adding an input device configuration api.
 
     # VR mode
@@ -95,7 +97,8 @@ class Main:
     flag_sfx_mem = True
     max_view_id = 0
 
-    assets_compiled = "assets_compiled"
+    # assets_compiled = "assets_compiled"
+    assets_compiled = "C:/Users/kimso/Downloads/dogfight-sandbox-hg2/source/assets_compiled"
 
     allies_missiles_smoke_color = hg.Color(1.0, 1.0, 1.0, 1.0)
     ennemies_missiles_smoke_color = hg.Color(1.0, 1.0, 1.0, 1.0)
@@ -1101,7 +1104,8 @@ class Main:
 
     @classmethod
     def load_json_script(cls, file_name="scripts/simulator_parameters.json"):
-        file = open(file_name, "r")
+        # file = open(file_name, "r")
+        file = open(base_path + '/' + file_name, "r")
         
         #file = hg.OpenText(file_name)
         if not file:

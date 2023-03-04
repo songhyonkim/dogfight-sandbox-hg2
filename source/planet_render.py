@@ -7,6 +7,8 @@ from math import pi, atan, sqrt, exp, pow, cos, sin, acos, asin
 import os
 from vr_tools import *
 
+import os
+base_path = os.path.dirname(__file__)
 
 class PlanetRender:
 	def __init__(self, scene, resolution: hg.Vec2, terrain_position, terrain_offset):  # , pipeline_resource:hg.PipelineResource):
@@ -219,7 +221,8 @@ class PlanetRender:
 
 	def load_json_script(self, file_name="scripts/planet_parameters.json"):
 		#file = hg.OpenText(file_name)
-		file = open(file_name, "r")
+		# file = open(file_name, "r")
+		file = open(base_path + '/' + file_name, "r")
 		if not file:
 			print("ERROR - Can't open json file : " + file_name)
 		else:
