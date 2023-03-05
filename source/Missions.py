@@ -10,6 +10,12 @@ import network_server as netws
 from overlays import *
 from MachineDevice import *
 
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
 class Mission:
 
 	def __init__(self, title, ennemies:list, allies:list, num_carriers_ennemies:int, num_carriers_allies:int, setup_players, end_test, end_phase_update):
@@ -56,7 +62,7 @@ class Missions:
 	am_t = 0
 
 	missions = []
-	mission_id = 2 # default mission
+	mission_id = int(env("default_mission_id")) # default mission
 
 	@classmethod
 	def display_mission_title(cls, main, fade_lvl, dts, yof7):
@@ -587,17 +593,18 @@ class Missions:
 		# cls.missions.append(Mission("Training with Rafale", [], ["Rafale"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 		# cls.missions.append(Mission("Training with Eurofighter", [], ["Eurofighter"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 		# cls.missions.append(Mission("Training with TFX", [], ["TFX"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
-		cls.missions.append(Mission("Training with F16", [], ["F16"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
+		# cls.missions.append(Mission("Training with F16", [], ["F16"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 		# cls.missions.append(Mission("Training with Miuss", [], ["Miuss"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 		#cls.missions.append(Mission("Training with F14", [], ["F14"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 		#cls.missions.append(Mission("Training with F14 2", [], ["F14_2"], 0, 1, Missions.mission_setup_training, Missions.mission_training_end_test, Missions.mission_training_end_phase_update))
 
 		cls.missions.append(Mission("One on one", ["F16"], ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
-		cls.missions.append(Mission("Fight against 2 ennemies", ["F16"] * 2, ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
+		# cls.missions.append(Mission("Fight against 2 ennemies", ["F16"] * 2, ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		# cls.missions.append(Mission("Fight against 3 ennemies", ["Rafale"] * 1 + ["F16"] * 2, ["Eurofighter"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		# cls.missions.append(Mission("Fight against 4 ennemies", ["Rafale"] * 2 + ["F16"] * 2, ["TFX", "Eurofighter"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		# cls.missions.append(Mission("Fight against 5 ennemies", ["Rafale"] * 5, ["TFX", "Eurofighter", "F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
+		cls.missions.append(Mission("Two on Two", ["F16"] * 2, ["F16"] * 2, 1, 1, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
 
 		cls.missions.append(Mission("War: 5 allies against 5 ennemies", ["F16"] * 3 + ["F16"] * 2, ["F16"] * 2 + ["F16"] * 2 + ["F16"] * 1, 1, 1, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
-		#cls.missions.append(Mission("Total War: 12 allies against 12 ennemies", ["Rafale"] * 12, ["TFX"] * 4 + ["Eurofighter"] * 4 + ["F16"] * 4 + ["Eurofighter"] * 4, 2, 2, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
+		cls.missions.append(Mission("Total War: 12 allies against 12 ennemies", ["F16"] * 12, ["F16"] * 12, 2, 2, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
 		#cls.missions.append(Mission("Crash test: 60 allies against 60 ennemies", ["Rafale"] * 30 + ["Eurofighter"] * 30, ["TFX"] * 30 + ["Eurofighter"] * 20 + ["F16"] * 10, 5, 5, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))

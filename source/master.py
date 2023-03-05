@@ -94,14 +94,14 @@ class Main:
     max_view_id = 0
 
     # assets_compiled = "assets_compiled"
-    assets_compiled = "C:/Users/kimso/Downloads/dogfight-sandbox-hg2/source/assets_compiled"
+    assets_compiled = env("assets_compiled_dir")
 
     allies_missiles_smoke_color = hg.Color(1.0, 1.0, 1.0, 1.0)
     ennemies_missiles_smoke_color = hg.Color(1.0, 1.0, 1.0, 1.0)
 
     flag_sfx = True
     flag_control_views = True
-    flag_display_fps = False
+    flag_display_fps = True
     flag_display_landing_trajectories = False
     flag_display_selected_aircraft = False
     flag_display_machines_bounding_boxes = False
