@@ -44,4 +44,4 @@ cd source
 
 python.exe main.py
 
-@REM pause
+pause
