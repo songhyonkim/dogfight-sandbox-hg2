@@ -331,6 +331,11 @@
             "type": "button",
             "id": 11,
             "name": "No.12 Button"
+        },
+        "LE3DB_UP": {
+            "type": "button",
+            "id": 12,
+            "name": "UP Button"
         }
     },    
     "Wired Gamepad": {
