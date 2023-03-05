@@ -10,6 +10,10 @@
 		{
 			"ACTIVATE_USER_CONTROL": "LA3B_TopHead"
 		},
+		"Logitech Extreme 3D":
+		{
+			"ACTIVATE_USER_CONTROL": "LE3DB_NO11"
+		},
 		"Wired Gamepad":
 		{
 			"ACTIVATE_USER_CONTROL": "WGPB_RThumb"
