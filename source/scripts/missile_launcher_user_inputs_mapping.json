@@ -9,6 +9,15 @@
 			"FIRE_MISSILE" : "LA3B_BottomHead",
 			"REARM" : ""
 		},
+		"Logitech Extreme 3D":{
+			"SWITCH_ACTIVATION": "",
+			"NEXT_PILOT": "",
+			"INCREASE_HEALTH_LEVEL": "",
+			"DECREASE_HEALTH_LEVEL": "",
+			"NEXT_TARGET": "LE3DB_NO11",
+			"FIRE_MISSILE" : "LE3DB_NO2",
+			"REARM" : "LE3DB_NO9"
+		},		
 		"Keyboard":{
 			"SWITCH_ACTIVATION": "",
 			"NEXT_PILOT": "",

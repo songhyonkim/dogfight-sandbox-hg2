@@ -227,6 +227,112 @@
             "name": "Right Top"
         }
     },
+    "Logitech Extreme 3D": {
+        "LE3DA_AxisX": {
+            "type": "axis",
+            "name": "Axis Horizontal1",
+            "reset": "true",
+            "invert": "false",
+            "id": 0,
+            "min": -1,
+            "max": 1,
+            "zero": 0,
+            "zero_epsilon": 0.01
+        },
+        "LE3DA_AxisY": {
+            "type": "axis",
+            "name": "Axis Vertical1",
+            "reset": "true",
+            "invert": "false",
+            "id": 1,
+            "min": -1,
+            "max": 1,
+            "zero": 0,
+            "zero_epsilon": 0.01
+        },
+        "LE3DA_AxisYaw": {
+            "type": "axis",
+            "name": "Axis Yaw",
+            "reset": "true",
+            "invert": "false",
+            "id": 2,
+            "min": -1,
+            "max": 0.77,
+            "zero": -0.27,
+            "zero_epsilon": 0.01
+        },        
+        "LE3DA_Throttle": {
+            "type": "axis",
+            "reset": "false",
+            "name": "Throttle",
+            "invert": "true",
+            "id": 3,
+            "min": -1,
+            "max": 1,
+            "zero": -1,
+            "zero_epsilon": 0.01
+        },
+        "LE3DB_Trigger": {
+            "type": "button",
+            "id": 0,
+            "name": "Trigger"
+        },
+        "LE3DB_NO2": { 
+            "type": "button",
+            "id": 1,
+            "name": "No.2 Button"
+        },
+        "LE3DB_NO3": { 
+            "type": "button",
+            "id": 2,
+            "name": "No.3 Button"
+        },
+        "LE3DB_NO4": { 
+            "type": "button",
+            "id": 3,
+            "name": "No.4 Button"
+        },
+        "LE3DB_NO5": {
+            "type": "button",
+            "id": 4,
+            "name": "No.5 Button"
+        },
+        "LE3DB_NO6": {
+            "type": "button",
+            "id": 5,
+            "name": "No.6 Button"
+        },
+        "LE3DB_NO7": {
+            "type": "button",
+            "id": 6,
+            "name": "No.7 Button"
+        },
+        "LE3DB_NO8": {
+            "type": "button",
+            "id": 7,
+            "name": "No.8 Button"
+        },
+        "LE3DB_NO9": {
+            "type": "button",
+            "id": 8,
+            "name": "No.9 Button"
+        },
+        "LE3DB_NO10": {
+            "type": "button",
+            "id": 9,
+            "name": "No.10 Button"
+        },
+        "LE3DB_NO11": {
+            "type": "button",
+            "id": 10,
+            "name": "No.11 Button"
+        },
+        "LE3DB_NO12": {
+            "type": "button",
+            "id": 11,
+            "name": "No.12 Button"
+        }
+    },    
     "Wired Gamepad": {
         "WGPB_1": {
             "type": "button",
