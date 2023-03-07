@@ -600,6 +600,7 @@ class Missions:
 
 		cls.missions.append(Mission("One on One", ["F16"], ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		cls.missions.append(Mission("Two on One", ["F16"] * 2, ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
+		cls.missions.append(Mission("Three on One", ["F16"] * 3, ["F16"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		cls.missions.append(Mission("Two on Three", ["F16"] * 2, ["F16"] * 3, 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		# cls.missions.append(Mission("Fight against 3 ennemies", ["Rafale"] * 1 + ["F16"] * 2, ["Eurofighter"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
 		# cls.missions.append(Mission("Fight against 4 ennemies", ["Rafale"] * 2 + ["F16"] * 2, ["TFX", "Eurofighter"], 1, 1, Missions.mission_setup_players, Missions.mission_one_against_x_end_test, Missions.mission_one_against_x_end_phase_update))
