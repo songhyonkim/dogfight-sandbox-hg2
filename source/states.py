@@ -160,7 +160,7 @@ def init_menu_state():
         ["Deploy / Undeploy gear",{"keyboard": imkb["SWITCH_GEAR"]}],
         ["Reset game" , {"keyboard": "TAB"}],
         ["Set View" , {"keyboard":"2/3/4/8/6/5/7/9"}],
-        ["Zoom" , {"keyboard": "Insert / Page Up"}],
+        ["Zoom" , {"keyboard": "F2 / F3"}],
         ["Aircraft selection (multi allies missions)" , {"keyboard": "Numeric pad : 1"}],
         ["Activate IA" , {"keyboard": "I"}],
         ["Activate User control" , {"keyboard": "U"}],

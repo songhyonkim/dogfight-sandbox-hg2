@@ -609,4 +609,4 @@ class Missions:
 
 		cls.missions.append(Mission("War: 5 allies against 5 ennemies", ["F16"] * 3 + ["F16"] * 2, ["F16"] * 2 + ["F16"] * 2 + ["F16"] * 1, 1, 1, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
 		cls.missions.append(Mission("Total War: 12 allies against 12 ennemies", ["F16"] * 12, ["F16"] * 12, 2, 2, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
-		#cls.missions.append(Mission("Crash test: 60 allies against 60 ennemies", ["Rafale"] * 30 + ["Eurofighter"] * 30, ["TFX"] * 30 + ["Eurofighter"] * 20 + ["F16"] * 10, 5, 5, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
+		cls.missions.append(Mission("Crash test: 60 allies against 60 ennemies", ["F16"] * 60, ["F16"] * 60, 5, 5, Missions.mission_total_war_setup_players, Missions.mission_war_end_test, Missions.mission_war_end_phase_update))
