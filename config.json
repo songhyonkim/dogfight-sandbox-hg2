@@ -1,6 +1,6 @@
 {
-    "Resolution": [1920, 1080],
-	"FullScreen": true,
+    "Resolution": [900, 600],
+	"FullScreen": false,
 	"OpenGL": true,
 	"VR": false, 
 	"AntiAliasing": 4,

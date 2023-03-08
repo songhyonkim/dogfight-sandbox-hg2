@@ -31,7 +31,7 @@ time.sleep(2)
 planes = df.get_planes_list()
 print(str(planes))
 
-df.disable_log()
+# df.disable_log()
 
 # Get the id of the plane you want to control
 plane_id = planes[0]
