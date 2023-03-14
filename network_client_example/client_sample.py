@@ -19,7 +19,7 @@ def print_fps():
 	dt = t1 - t0
 	t0 = t1
 	if dt > 0:
-		print(str(1 / dt))
+		print('fps: ' + str(1 / dt))
 
 # Enter the IP and port displayed in top-left corner of DogFight screen
 df.connect("10.0.0.37", 50888)
