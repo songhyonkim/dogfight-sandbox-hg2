@@ -9,7 +9,7 @@ import time
 from math import sin, cos
 
 # Enter the IP and port displayed in top-left corner of DogFight screen
-df.connect("192.168.42.86", 50888)
+df.connect("10.0.0.37", 50888)
 
 time.sleep(2)
 
