@@ -544,7 +544,8 @@ class Main:
         if md is not None:
             for j in range(md.num_slots):
                 missile_type = md.missiles_config[j]
-                missile = cls.create_missile(missile_type, machine.name + "-" + missile_type + "-" + str(j), machine.nationality)
+                # missile = cls.create_missile(missile_type, machine.name + "-" + missile_type + "-" + str(j), machine.nationality)
+                missile = cls.create_missile(missile_type, machine.name + missile_type + str(j), machine.nationality)
                 md.fit_missile(missile, j)
                 missile.set_smoke_color(smoke_color)
             return md.missiles
