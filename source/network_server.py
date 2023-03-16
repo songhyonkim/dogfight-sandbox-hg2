@@ -159,13 +159,14 @@ def server_update():
 					flag_server_connected = False
 					main.flag_client_connected = False
 				else:
-					msg = "command:" + command["command"]
+					msg = "command-1:" + command["command"] + ' ' + str(command["args"])
 					if flag_print_log:
 						print(msg)
 						server_log += msg
 					commands_functions[command["command"]](command["args"])
 
-		except:
+		except Exception as e:
+			print(str(e))
 			print("network_server.py - server_update ERROR")
 			flag_server_connected = False
 			main.flag_client_connected = False
@@ -711,10 +712,10 @@ def get_plane_state(args):
 
 def get_planes_list(args):
 	planes = []
-	print("Get planes list")
+	# print("Get planes list")
 	for dm in main.destroyables_list:
 		if dm.type == Destroyable_Machine.TYPE_AIRCRAFT:
-			print(dm.name)
+			# print(dm.name)
 			planes.append(dm.name)
 	socket_lib.send_message(str.encode(json.dumps(planes)))
 
@@ -996,7 +997,6 @@ def get_missile_targets_list(args):
 def set_missile_thrust_force(args):
 	missile = main.destroyables_items[args["missile_id"]]
 	missile.set_thrust_force(args["thrust_force"])
-
 def set_missile_angular_frictions(args):
 	missile = main.destroyables_items[args["missile_id"]]
 	missile.set_angular_friction(args["angular_frictions"][0], args["angular_frictions"][1], args["angular_frictions"][2] )
